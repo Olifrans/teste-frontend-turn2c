@@ -7,14 +7,14 @@
     </tr>
   </thead>
 
-  <!-- Observable assincrono pokemons$ | async  !!! as pokemon(alias de retorno) para ser acessado dentro do bloco de código-->
+  <!-- Observable assincrono thecatapi$ | async  !!! as thecatapi(alias de retorno) para ser acessado dentro do bloco de código-->
   <tbody *ngIf="thecatapi$ | async as thecatapis">
 
     <!-- Consumindo o resultado do retorno -->
     <tr *ngFor="let item of thecatapis">
-      <td>Nome:{{ item.id }} </td>
+      <td>Nome: {{ item.id }} </td>
       <br />
-      <td>Link{{ item.id }} </td>
+      <td>Link: {{ item.url }} </td>
     </tr>
   
   </tbody>
