@@ -1,1 +1,22 @@
 <h1>Teste Desenvolvedor Web Turn2C</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome:</th>
+    </tr>
+  </thead>
+
+  <!-- Observable assincrono pokemons$ | async  !!! as pokemon(alias de retorno) para ser acessado dentro do bloco de código-->
+  <tbody *ngIf="thecatapi$ | async as thecatapis">
+
+    <!-- Consumindo o resultado do retorno -->
+    <tr *ngFor="let item of thecatapis">
+      <td>Nome:{{ item.id }} </td>
+      <td>Link{{ item.id }} </td>
+    </tr>
+  
+  </tbody>
+</table>
+
+<!-- <app-consumindo-api-dog></app-consumindo-api-dog> -->
